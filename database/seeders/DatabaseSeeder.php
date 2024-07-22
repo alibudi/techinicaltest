@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder
             PackageSeeder::class,
             LearningSeeder::class,
             SettingSeeder::class,
+            MentorsTableSeeder::class,
+            ClassesTableSeeder::class,
+            ClassWatchTimesTableSeeder::class,
         ]);
     }
 }
