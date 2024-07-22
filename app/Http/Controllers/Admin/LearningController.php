@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 
 class LearningController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
     public function index()
     {
         $learnings = Learning::all();
