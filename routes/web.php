@@ -9,9 +9,9 @@ use App\Http\Controllers\SubscriptionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
 
@@ -19,7 +19,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('learnings', LearningController::class);
 Route::resource('packages', PackageController::class);
 Route::resource('settings', SettingController::class);
-Route::get('landing', [HomeController::class,'landing'])->name('landing');
+Route::get('/', [HomeController::class,'landing'])->name('landing');
 
 Route::post('api/subscriptions', [SubscriptionController::class, 'createSubscription']);
 Route::post('api/class-watch-times', [ClassWatchTimeController::class, 'recordWatchTime']);
